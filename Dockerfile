@@ -12,5 +12,5 @@ RUN dotnet publish "QuijanoLibraryNowAPI.csproj" -c Release -o /app/out
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/out .
-ENTRYPOINT ["dotnet", "QuijanoLibraryNowAPI.dll"]S
+ENTRYPOINT ["dotnet", "QuijanoLibraryNowAPI.dll"]
 
